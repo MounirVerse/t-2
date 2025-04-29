@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Signals - All Pairs</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>All Trading Signals</h1>
+            <div class="header-info">
+                <p class="refresh-time">Auto-refreshes every 5 minutes</p>
+                <div class="header-actions">
+                    <button onclick="window.location.href='index.html'" class="back-button">Back to Analysis</button>
+                    <button onclick="window.signalsManager.refreshSignals()" class="refresh-button">Refresh Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="status-info">
+            <p>Analyzing top 50 pairs by volume <span class="countdown pairs-countdown">15:00</span></p>
+            <p class="update-time">Auto-refreshes every 5 minutes <span class="countdown signals-countdown">1:00</span></p>
+        </div>
+        <div class="signals-filters">
+            <select id="strengthFilter">
+                <option value="all">All Strengths</option>
+                <option value="strong">Strong (>70%)</option>
+                <option value="medium">Medium (40-70%)</option>
+                <option value="weak">Weak (<40%)</option>
+            </select>
+            <select id="typeFilter">
+                <option value="all">All Types</option>
+                <option value="long">Long</option>
+                <option value="short">Short</option>
+            </select>
+            <select id="symbolFilter">
+                <option value="all">All Pairs</option>
+            </select>
+        </div>
+        <div id="signalsList" class="signals-list"></div>
+    </div>
+    <script src="signals.js"></script>
+</body>
+</html> 

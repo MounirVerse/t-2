@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Tests List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="test-header">
+            <h1>Trading Tests</h1>
+            <div class="header-actions">
+                <button id="exportButton" class="export-button">
+                    <i class="fas fa-file-excel"></i> Export to Excel
+                </button>
+                <a href="index.html" class="back-button">Back to Analysis</a>
+            </div>
+        </div>
+        <div class="tests-container">
+            <div class="tests-filters">
+                <select id="statusFilter">
+                    <option value="all">All Status</option>
+                    <option value="active">Active</option>
+                    <option value="completed">Completed</option>
+                    <option value="stopped">Stopped</option>
+                </select>
+                <select id="symbolFilter">
+                    <option value="all">All Symbols</option>
+                </select>
+            </div>
+            <div id="testsList" class="tests-list"></div>
+        </div>
+    </div>
+    <script src="tests-list.js"></script>
+</body>
+</html> 
